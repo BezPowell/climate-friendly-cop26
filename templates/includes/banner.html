@@ -9,5 +9,5 @@
       {{ resize_image(path=banner, width=1280, height=709, quality=100) }} 1280w,
       {{ resize_image(path=banner, width=640, height=355, quality=100) }} 640w" sizes="100vw" />
 
-    <img src="{{ resize_image(path=banner, width=640, height=355, quality=100) }}" alt="" loading="lazy" />
+    <img src="{{ resize_image(path=banner, width=640, height=355, quality=100) }}" alt="" loading="eager" />
 </picture>
