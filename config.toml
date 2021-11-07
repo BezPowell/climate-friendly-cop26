@@ -16,3 +16,4 @@ description = "A low-emissions alternative to the official COP26 Website."
 
 [extra]
 # Put all your custom variables here
+brand_logo = "../static/img/COP26_logo_landscape_blue_RGB-small.png"

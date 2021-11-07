@@ -18,8 +18,9 @@
         <nav class="navbar fixed-top navbar-expand-lg bg-white shadow">
             <div class="container">
                 <a class="navbar-brand" href="/">
-                    <img src="/img/COP26_logo_landscape_blue_RGB-small.png" class="ukcop26-site-logo"
-                        alt="Climate Friendly COP26" />
+                    <img src="{{ resize_image(path=config.extra.brand_logo, width=145, height=75) }}"
+                        class="ukcop26-site-logo" alt="Climate Friendly COP26"
+                        srcset="{{ resize_image(path=config.extra.brand_logo, width=145, height=75) }} 1x, {{ resize_image(path=config.extra.brand_logo, width=290, height=150) }} 2x" />
                 </a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar"
                     aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
@@ -32,8 +33,8 @@
                         {% for section_path in root.subsections %}
                         {% set section = get_section(path=section_path) %}
                         <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown-{{ loop.index }}" role="button"
-                                data-bs-toggle="dropdown" aria-expanded="false">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown-{{ loop.index }}"
+                                role="button" data-bs-toggle="dropdown" aria-expanded="false">
                                 {{ section.title }}
                             </a>
                             <ul class="dropdown-menu" aria-labelledby="navbarDropdown-{{ loop.index }}">
