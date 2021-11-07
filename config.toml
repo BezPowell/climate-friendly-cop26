@@ -1,5 +1,5 @@
 # The URL the site will be built for
-base_url = "https://example.com"
+base_url = "https://climate-friendly-cop26.org"
 
 # Whether to automatically compile all Sass files in the sass directory
 compile_sass = true
@@ -10,6 +10,9 @@ highlight_code = false
 
 # Whether to build a search index to be used later on by a JavaScript library
 build_search_index = false
+
+title = "Climate Friendly COP26"
+description = "A low-emissions alternative to the official COP26 Website."
 
 [extra]
 # Put all your custom variables here
