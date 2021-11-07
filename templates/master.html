@@ -32,11 +32,11 @@
                         {% for section_path in root.subsections %}
                         {% set section = get_section(path=section_path) %}
                         <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown-{{ loop.index }}" role="button"
                                 data-bs-toggle="dropdown" aria-expanded="false">
                                 {{ section.title }}
                             </a>
-                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown-{{ loop.index }}">
                                 {% for page in section.pages %}
                                 <li><a class="dropdown-item" href="{{ page.permalink }}">{{ page.title }}</a></li>
                                 {% endfor %}
