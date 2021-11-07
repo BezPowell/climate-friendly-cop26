@@ -1,0 +1,20 @@
+{
+  "scripts": {
+    "build": "zola build",
+    "postbuild": "node node/index.js",
+    "serve": "zola serve"
+  },
+  "dependencies": {
+    "fs": "0.0.1-security",
+    "globby": "^11.0.4",
+    "imagemin-gifsicle": "^7.0.0",
+    "imagemin-jpeg-recompress": "^7.0.0",
+    "imagemin-optipng": "^8.0.0",
+    "imagemin-overwrite": "^7.0.1",
+    "imagemin-svgo": "^9.0.0",
+    "purgecss": "^4.0.3",
+    "terser": "^5.9.0",
+    "@popperjs/core": "^2.10.2",
+    "bootstrap": "^5.1.3"
+  }
+}

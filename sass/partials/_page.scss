@@ -1,0 +1,84 @@
+@font-face {
+    font-family: 'utilityboldcondensed';
+    src        : url('/fonts/UTILITY-webfont.woff2') format('woff2'),
+        url('/fonts/UTILITY-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style : normal;
+
+}
+
+body {
+    overflow-x: hidden;
+}
+
+.feature-title {
+    position     : relative;
+    margin-bottom: 7rem;
+
+    .banner {
+        width : 100%;
+        height: auto;
+    }
+
+    .page-title {
+        position : absolute;
+        top      : 50%;
+        left     : 0;
+        right    : 0;
+        transform: translateY(-50%);
+
+        font-family   : 'utilityboldcondensed', sans-serif;
+        text-transform: uppercase;
+        font-size     : 5rem;
+        color         : white;
+        text-align    : center;
+
+        @include media-breakpoint-up(md) {
+            font-size: 6rem;
+        }
+
+        @include media-breakpoint-up(lg) {
+            font-size: 12rem;
+        }
+    }
+}
+
+.subtitle {
+    margin-bottom: 3rem;
+    font-weight  : bolder;
+
+    &::after {
+        content      : "";
+        display      : block;
+        margin       : 0;
+        width        : 67px;
+        padding-top  : 2.25rem;
+        border-bottom: 4.25px solid #8CDC73;
+    }
+}
+
+.btn-primary {
+    text-transform: uppercase;
+    font-weight   : bold;
+}
+
+.btn-lg {
+    margin-bottom: 1.5rem;
+}
+
+.site-content {
+    padding-bottom: 3.75rem;
+}
+
+.aligncenter {
+    text-align: center;
+}
+
+.partner-logo {
+    margin: 1.75rem 0;
+}
+
+hr {
+    margin: 3rem 0;
+    height: 3px;
+}

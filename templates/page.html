@@ -1,0 +1,24 @@
+{% extends "master.html" %}
+{% block content %}
+<main class="site-content">
+    <div class="feature-title bg-primary">
+        {% set banner = page.assets[0] %}
+        <h1 class="page-title">{{ page.title }}</h1>
+        {% include "includes/banner.html" %}
+    </div>
+    <div id="page-content" class="container">
+        <div class="row">
+            <div class="col-12">
+                <h2 class="subtitle">{{ page.extra.subtitle }}</h2>
+                {{ page.content | safe }}
+
+                <hr />
+
+                {% include "includes/partners.html" %}
+            </div>
+        </div>
+    </div>
+
+    </div>
+</main>
+{% endblock content %}

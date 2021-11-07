@@ -1,0 +1,23 @@
+$blue            : #37328C;
+$border-radius   : 0;
+$border-radius-sm: 0;
+$border-radius-lg: 0;
+
+// Layout
+$grid-breakpoints: (xs: 0,
+    sm: 576px,
+    md: 768px,
+    lg: 992px,
+    xl: 1200px);
+
+$container-max-widths: (sm: 540px,
+    md: 720px,
+    lg: 960px,
+    xl: 1140px);
+
+// Buttons
+$btn-font-size-lg: 1.5rem;
+
+// Nabar
+$nav-link-font-size: 0.8rem;
+$nav-link-font-weight: bold;

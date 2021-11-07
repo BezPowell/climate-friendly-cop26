@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="en-GB">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link href="{{ get_url(path='css/main.css', cachebust=true) }}" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Dela+Gothic+One&display=swap" rel="stylesheet">
+
+    <title>Hello, world!</title>
+</head>
+
+<body>
+    <header>
+        <nav class="navbar fixed-top navbar-expand-lg bg-white shadow">
+            <div class="container">
+                <a class="navbar-brand" href="/">
+                    <img src="/img/COP26_logo_landscape_blue_RGB-small.png" class="ukcop26-site-logo"
+                        alt="Climate Friendly COP26" />
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar"
+                    aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                    Menu
+                </button>
+                <div class="collapse navbar-collapse" id="navbar">
+                    <ul class="navbar-nav">
+                        {% set root = get_section(path="_index.md") %}
+                        {% for section_path in root.subsections %}
+                        {% set section = get_section(path=section_path) %}
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                                data-bs-toggle="dropdown" aria-expanded="false">
+                                {{ section.title }}
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                {% for page in section.pages %}
+                                <li><a class="dropdown-item" href="{{ page.permalink }}">{{ page.title }}</a></li>
+                                {% endfor %}
+                            </ul>
+                        </li>
+                        {% endfor %}
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    {% block content %}
+    {% endblock content %}
+
+    <footer id="colophon" class="site-footer" role="contentinfo">
+        <div class="container">
+            <div class="row justify-content-between align-items-center">
+                <nav class="col-sm-4 footer-left">
+                    <ul id="menu-footer-menu" class="menu nav flex-column">
+                        <li class="menu-item">
+                            <a href="/privacy/" class="nav-link">PRIVACY</a>
+                        </li>
+                        <li class="menu-item">
+                            <a href="/privacy/" class="nav-link">TERMS & CONDITIONS</a>
+                        </li>
+                        <li class="menu-item">
+                            <a href="/privacy/" class="nav-link">ACCESSIBILITY</a>
+                        </li>
+                        <li class="menu-item">
+                            <a href="/privacy/" class="nav-link">CONTACT</a>
+                        </li>
+                    </ul>
+                </nav>
+                <div class="col-sm-4 footer-right text-end">
+                    <img class="footer-logo" src="/img/footer/UKGov.svg" alt="UK Government" loading="lazy" width="95"
+                        height="40" />
+                    <img class="footer-logo"
+                        src="/img/footer/unfccc-lwm-cc-2c-pmsu-10-trans_white_UN_Climate_Change-1.svg"
+                        alt="United Nations Framework Convention on Climate Change" loading="lazy" width="141"
+                        height="41" />
+                </div>
+            </div>
+        </div><!-- close .site-info -->
+    </footer>
+
+    <script src="/js/selector-engine.js"></script>
+    <script src="/js/dropdown.js"></script>
+</body>
+
+</html>

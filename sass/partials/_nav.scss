@@ -1,0 +1,48 @@
+.ukcop26-site-logo {
+    width       : auto;
+    height      : 75px;
+    padding-left: 1rem;
+}
+
+.navbar {
+    //position: fixed;
+}
+
+.navbar-collapse {
+    margin-top     : 2rem;
+    justify-content: flex-end;
+}
+
+@include media-breakpoint-up(lg) {
+
+    // Mega menu styles
+    .navbar>.container {
+        position: relative;
+    }
+
+    .nav-item.dropdown {
+        position: static;
+
+        .dropdown-menu.show {
+            display  : flex;
+            flex-flow: row wrap;
+
+            margin-top      : 0;
+            padding         : 0;
+            transform       : translateY(0.5rem);
+            background-color: $primary;
+            color           : $white;
+            text-transform  : uppercase;
+            font-size       : 0.9rem;
+        }
+
+        .dropdown-item {
+            color: inherit;
+
+            &:hover,
+            &:focus {
+                background-color: $blue-700;
+            }
+        }
+    }
+}

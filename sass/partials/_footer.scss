@@ -1,0 +1,26 @@
+.site-footer {
+    background-color   : $primary;
+    color              : $white;
+    padding-top        : 1.5rem;
+    background-image   : url("/img/footer/UK2020-core-large.png");
+    background-position: center bottom;
+    background-repeat  : no-repeat;
+    background-size    : 300px;
+    padding-bottom     : 6rem;
+
+    @include media-breakpoint-up(lg) {
+        background-size: unset;
+        padding-bottom : 1.5rem;
+    }
+}
+
+.site-footer .nav-link {
+    color         : inherit;
+    font-weight   : bold;
+    text-transform: uppercase;
+    font-size     : $font-size-sm;
+}
+
+.footer-logo {
+    margin: 0.5rem;
+}

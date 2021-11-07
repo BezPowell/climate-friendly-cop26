@@ -1,0 +1,24 @@
+{% extends "master.html" %}
+{% block content %}
+<main class="site-content">
+    <div class="feature-title bg-primary">
+        {% set banner = "../static/img/home-header.jpg" %}
+        <h1 class="page-title">Climate Friendly<br /> COP26</h1>
+        {% include "includes/banner.html" %}
+    </div>
+    <div id="page-content" class="container">
+        <div class="row">
+            <div class="col-12">
+                <h2 class="subtitle">{{ section.extra.subtitle }}</h2>
+                {{ section.content | safe }}
+
+                <hr />
+
+                {% include "includes/partners.html" %}
+            </div>
+        </div>
+    </div>
+
+    </div>
+</main>
+{% endblock content %}

@@ -1,0 +1,13 @@
+{% set partners = load_data(path="content/partners.json") %}
+<h3 class="text-center fw-bold text-uppercase fs-5">With thanks to our principal partners</h3>
+<ul class="row justify-content-center align-items-center list-unstyled">
+    {% for partner in partners %}
+    <li class="col-sm-3 aligncenter partner-logo">
+        <a href="{{ partner.url }}" target="_blank" rel="noopener">
+            {% set meta = get_image_metadata(path = "../static" ~ partner.image) %}
+            <img loading="lazy" src="{{ partner.image }}"
+                alt="Unilever" width="{{ meta.width }}" height="{{ meta.height }}" />
+        </a>
+    </li>
+    {% endfor %}
+</ul>
