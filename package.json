@@ -1,5 +1,6 @@
 {
   "scripts": {
+    "prebuild": "webpack --config webpack.config.js",
     "build": "zola build",
     "postbuild": "node node/index.js",
     "serve": "zola serve"
