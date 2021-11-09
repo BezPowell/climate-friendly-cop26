@@ -12,34 +12,48 @@ body {
 }
 
 .feature-title {
-    position     : relative;
-    margin-bottom: 7rem;
+    position       : relative;
+    margin-bottom  : 7rem;
+    aspect-ratio   : 320 / 468;
+    display        : flex;
+    justify-content: center;
+    align-items    : center;
 
-    .banner {
-        width : 100%;
-        height: auto;
+    @include media-breakpoint-up(md) {
+        aspect-ratio: 1440 / 798;
+    }
+}
+
+.feature-title .banner {
+    position: absolute;
+    top     : 0;
+    right   : 0;
+    bottom  : 0;
+    left    : 0;
+    z-index : 1;
+
+    img {
+        width     : 100%;
+        height    : 100%;
+        object-fit: cover;
+    }
+}
+
+.feature-title .page-title {
+    position      : relative;
+    font-family   : 'utilityboldcondensed', sans-serif;
+    text-transform: uppercase;
+    font-size     : 5rem;
+    color         : white;
+    text-align    : center;
+    z-index       : 2;
+
+    @include media-breakpoint-up(md) {
+        font-size: 6rem;
     }
 
-    .page-title {
-        position : absolute;
-        top      : 50%;
-        left     : 0;
-        right    : 0;
-        transform: translateY(-50%);
-
-        font-family   : 'utilityboldcondensed', sans-serif;
-        text-transform: uppercase;
-        font-size     : 5rem;
-        color         : white;
-        text-align    : center;
-
-        @include media-breakpoint-up(md) {
-            font-size: 6rem;
-        }
-
-        @include media-breakpoint-up(lg) {
-            font-size: 12rem;
-        }
+    @include media-breakpoint-up(lg) {
+        font-size: 12rem;
     }
 }
 
