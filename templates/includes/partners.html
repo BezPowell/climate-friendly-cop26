@@ -5,8 +5,20 @@
     <li class="col-sm-3 aligncenter partner-logo">
         <a href="{{ partner.url }}" target="_blank" rel="noopener">
             {% set meta = get_image_metadata(path = "../static" ~ partner.image) %}
-            <img loading="lazy" src="{{ partner.image }}"
-                alt="Unilever" width="{{ meta.width }}" height="{{ meta.height }}" />
+            {% set normal_dpi = [
+                meta.width / 2 | round | int, 
+                meta.height / 2 | round | int
+                ] 
+            %}
+            <img
+            loading="lazy"
+            src="{{ resize_image(path="../static" ~ partner.image, width=meta.width, height=meta.height) }}"
+            alt="{{ partner.name }}"
+            width="{{ normal_dpi[0] }}"
+            height="{{ normal_dpi[1] }}"
+            srcset="
+            {{ resize_image(path="../static" ~ partner.image, width=meta.width, height=meta.height) }} 2x, 
+            {{ resize_image(path="../static" ~ partner.image, width=normal_dpi[0], height=normal_dpi[1]) }} 1x" />
         </a>
     </li>
     {% endfor %}

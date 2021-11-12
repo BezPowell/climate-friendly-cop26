@@ -2,67 +2,67 @@
     {
         "name": "Unilever",
         "url": "https://www.unilever.com/",
-        "image": "/img/partners/Unilever-Logo-blue-2-205x226.png"
+        "image": "/img/partners/Unilever.png"
 
     },
     {
         "name": "SSE",
         "url": "https://www.sse.com/",
-        "image": "/img/partners/SSE_Logo_PMS-348x80-1.png"
+        "image": "/img/partners/SSE.png"
 
     },
     {
         "name": "SKY",
         "url": "https://www.sky.com/",
-        "image": "/img/partners/Sky_Master_Brand_Logo_LARGE_RGB_RGB-1-348x213-1.png"
+        "image": "/img/partners/Sky.png"
 
     },
     {
         "name": "Scottish Power",
         "url": "https://www.scottishpower.com/",
-        "image": "/img/partners/AF-SP-VER-NEG-CMYK-348x141-1.png"
+        "image": "/img/partners/SP.png"
 
     },
     {
         "name": "Sainsburys",
         "url": "https://www.sainsburys.co.uk/",
-        "image": "/img/partners/Sainsburys_Logo_Masterbrand_Orange_RGB_1280x240px-348x65.png"
+        "image": "/img/partners/Sainsburys.png"
 
     },
     {
         "name": "Reckitt",
         "url": "https://www.reckitt.com/",
-        "image": "/img/partners/reckitt-cropped-348x189.png"
+        "image": "/img/partners/reckitt.png"
 
     },
     {
         "name": "Nat West Group",
         "url": "https://www.natwestgroup.com/",
-        "image": "/img/partners/NWG_LOGO_HZ_POS_RGB-768x291-1-348x104.png"
+        "image": "/img/partners/NWG.png"
 
     },
     {
         "name": "National Grid",
         "url": "https://www.nationalgrid.com/",
-        "image": "/img/partners/National_Grid_Logo_RGB-348x111-1.png"
+        "image": "/img/partners/National_Grid.png"
 
     },
     {
         "name": "Microsoft",
         "url": "https://www.microsoft.com/en-gb",
-        "image": "/img/partners/1000px-Microsoft_logo_2012.svg-348x74.png"
+        "image": "/img/partners/Microsoft.png"
 
     },
     {
         "name": "Hitachi",
         "url": "https://www.hitachi.com/",
-        "image": "/img/partners/hitcahi-1-348x136.png"
+        "image": "/img/partners/hitcahi.png"
 
     },
     {
         "name": "Gsk",
         "url": "https://www.gsk.com/en-gb/",
-        "image": "/img/partners/GSK_logo-257x226.png"
+        "image": "/img/partners/GSK.png"
 
     }
 ]
